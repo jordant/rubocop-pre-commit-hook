@@ -1,0 +1,6 @@
+-   id: check-rubocop
+    name: Check Rubocop
+    description: This hook checks ruby files for syntax and style
+    entry: check-rubocop
+    language: python
+    files: \(.rb|.erb)$
