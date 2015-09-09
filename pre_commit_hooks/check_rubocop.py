@@ -16,8 +16,8 @@ def check_rubocop(argv=None):
 
     try:
         p = subprocess.Popen(command, shell=False)
-        if not p.returncode == 0:
-            retval = 1
+        p.communicate()[0]
+        retval = p.returncode
     except Exception as err:
         print('{0}: Failed to rubocop ({1})'.format(args.filenames, err))
         retval = 1
