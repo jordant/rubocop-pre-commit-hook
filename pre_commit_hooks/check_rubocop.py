@@ -15,11 +15,9 @@ def check_rubocop(argv=None):
     command = ["rubocop"] + args.filenames
 
     try:
-        p = subprocess.Popen(command, shell=False)
-        p.communicate()[0]
-        retval = p.returncode
-    except Exception as err:
-        print('{0}: Failed to rubocop ({1})'.format(args.filenames, err))
+        retval = subprocess.check_call(command, shell=False)
+    except subprocess.CalledProcessError as err:
+        print('{0}: rubocop failed ({1})'.format(args.filenames, err))
         retval = 1
 
     return retval
