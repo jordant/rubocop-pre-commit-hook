@@ -4,8 +4,8 @@ from setuptools import setup
 
 setup(
     name='pre_commit_hooks',
-    description='Chef pre commit hooks.',
-    url='https://github.com/jordant/chef-pre-commit-hooks',
+    description='rubocop pre commit hook.',
+    url='https://github.com/jordant/rubocop-pre-commit-hook',
     version='0.1',
 
     author='Jordan Tardif',
