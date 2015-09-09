@@ -8,5 +8,5 @@ setup(name='Distutils',
       author='Jordan Tardif',
       author_email='jordan.tardif@gmail.com',
       url='https://github.com/jordant/chef-tools.git',
-      scripts=['pre_commit_hooks/check_rubocop'],
+      scripts=['pre_commit_hooks/check_rubocop.py'],
       )
